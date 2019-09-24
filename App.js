@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
+import HomeScreen from './components/base/Home';
 
 export default class App extends Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text style={{fontWeight:'bold'}}>SN Papers</Text>
-      </View>
+      <HomeScreen/>
     );
   }
 }
