@@ -1,69 +1,30 @@
-import React, {Component} from 'react';
-import {Text, View, StyleSheet, Image} from 'react-native';
+import React from 'react';
+import firebase from 'react-native-firebase';
+import {StyleSheet, Platform, Image, Text, View} from 'react-native';
 
 export default class HomeScreen extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isVisible: true,
-    };
-  }
-  Hide_Splash_Screen = () => {
-    this.setState({
-      isVisible: false,
-    });
-  };
-
+  state = {currentUser: null};
   componentDidMount() {
-    var that = this;
-    setTimeout(function() {
-      that.Hide_Splash_Screen();
-    }, 5000);
+    const {currentUser} = firebase.auth();
+    this.setState({currentUser});
   }
-  static navigationOptions = {
-    header: null,
-  };
+  state = {currentUser: null};
   render() {
-    let Splash_Screen = (
-      <View style={styles.SplashScreen_RootView}>
-        <View style={styles.SplashScreen_ChildView}>
-          <Image
-            source={require('./Home.jpg')}
-            style={{width: '100%', height: '100%', resizeMode: 'cover'}}
-          />
-        </View>
-      </View>
-    );
+    const {currentUser} = this.state;
     return (
-      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={{fontWeight: 'bold'}}>SN Papers</Text>
-        {this.state.isVisible === true ? Splash_Screen : null}
+      <View style={styles.container}>
+        <Text style={{fontWeight: 'bold'}}>
+          SN Papers {currentUser && currentUser.email}!
+        </Text>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  MainContainer: {
+  container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: Platform.OS === 'ios' ? 20 : 0,
-  },
-
-  SplashScreen_RootView: {
-    justifyContent: 'center',
-    flex: 1,
-    margin: 10,
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-  },
-
-  SplashScreen_ChildView: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    flex: 1,
   },
 });
