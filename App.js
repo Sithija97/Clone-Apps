@@ -1,90 +1,44 @@
-import React, {Component} from 'react';
-import {Text, View, StyleSheet, Image} from 'react-native';
+
+
+import React from 'react';
 import {
-  createStackNavigator,
-  createAppContainer,
-  createDrawerNavigator,
-} from 'react-navigation';
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+} from 'react-native';
 
-//initialize firebase
+import {
+  Header,
+  LearnMoreLinks,
+  Colors,
+  DebugInstructions,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
 
-import Icon from 'react-native-vector-icons/Ionicons';
+export default class App extends React.Component{
+  render(){
+    return(
+      <View style={styles.container}>
+        <Text style={styles.text}>
+          SN's Mobile
+        </Text>
+      </View>
 
-import HomeScreen from './components/base/Home';
-import WelcomeScreen from './components/base/Welcome';
-import AbtUsScreen from './components/base/AboutUs';
-import LocationScreen from './components/base/Locations/Location';
-import LoadingScreen from './components/base/Loading';
-import SignUpScreen from './components/base/SignUp';
-import LoginScreen from './components/base/Login';
-
-export default class App extends Component {
-  static navigationOptions = {
-    header: null,
-  }
-  render() {
-    return <AppContainer/>;
+    );
   }
 }
-
-const DrawerNavigator = createDrawerNavigator(
-  {
-    Home: HomeScreen,
-    AboutUs: AbtUsScreen,
-    Locations: LocationScreen
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    alignItems:'center',
+    justifyContent:'center'
   },
-  {
-    hideStatusBar: true,
-    drawerBackgroundColor: 'rgba(255,255,255,.9)',
-    overlayColor: '#ced6e0',
-    contentOptions: {
-      activeTintColor: '#fff',
-      activeBackgroundColor: '#4834d4',
-    },
-  },
-);
-
-const HomeNavigator = createStackNavigator(
-  {
-    Welcome:WelcomeScreen,
-    Loading:LoadingScreen,
-    SignUp:SignUpScreen,
-    Login:LoginScreen,
-    Home: DrawerNavigator,
- 
-  },
-  
-  {
-    initialRouteName: 'Loading'
-  },
-
-  {
-    defaultNavigationOptions: ({ navigation }) => {
-      return{
-        headerStyle: {
-          backgroundColor:'#4834d4'
-        },
-        //headerTitle:'Home',
-        headerTintColor:'#fff',
-        headerTitleStyle: {
-          fontWeight:'bold',
-          textAlign:'center',
-          flex:1
-        },
-        headerLeft: (
-          <Icon
-          style={{paddingLeft:10, color:'white'}}
-          onPress={() => navigation.openDrawer()}
-          name="md-menu"
-          size={30}
-          />
-        ),
-        headerRight: (
-          <View/>
-        )
-      }
-    }
+  text:{
+    fontWeight:'bold'
   }
-);
+});
 
-const AppContainer = createAppContainer(HomeNavigator);
+
