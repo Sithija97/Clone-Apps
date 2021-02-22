@@ -1,5 +1,6 @@
 import React from 'react'
 import './SidebarOptions.css'
+import db from '../firebase'
 
 function SidebarOptions({Icon, title}) {
     return (

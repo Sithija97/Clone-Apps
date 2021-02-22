@@ -11,9 +11,8 @@ function Sidebar() {
 
     useEffect(() => {
         db.collection("rooms").onSnapshot((snapshot) => (
-            // console.log('snap: '+snapshot)
             setChannels(
-                snapshot.docs.map(doc => ({
+                snapshot.docs.map((doc) => ({
                     id: doc.id,
                     name: doc.data().name,
                 }))
@@ -30,10 +29,9 @@ function Sidebar() {
                 <CreateIcon/>
             </div>
             <SidebarOptions Icon={InsertCommentIcon} title='Threads'/>
-            {channels.map(channel => {
-                 <SidebarOptions  title={channel.name} id={channel.id}/>
-                 console.log('channel: '+channel.name)
-            })}
+            {channels.map(channel => (
+                 <SidebarOptions title={channel.name} id={channel.id} />
+            ))}
         </div>
     )
 }
