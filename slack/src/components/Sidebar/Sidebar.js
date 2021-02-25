@@ -46,7 +46,7 @@ function Sidebar() {
             <SidebarOptions Icon={FileCopyIcon} title='File browser'/>
             <SidebarOptions Icon={ExpandLessIcon} title='Show less'/>
             <SidebarOptions Icon={ExpandMoreIcon} title='Channels'/>
-            <SidebarOptions Icon={AddIcon} title='Add Channel'/>
+            <SidebarOptions Icon={AddIcon} addChannelOption title='Add Channel'/>
             {channels.map(channel => (
                  <SidebarOptions title={channel.name} id={channel.id} />
             ))}

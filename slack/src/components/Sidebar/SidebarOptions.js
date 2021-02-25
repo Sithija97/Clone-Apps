@@ -12,7 +12,15 @@ function SidebarOptions({ Icon, title, id, addChannelOption }) {
             history.push(`title`)
         }
     }
-    const addChannel = () => {}
+    const addChannel = () => {
+        const chanelName = prompt('Please enter channel name')
+
+        if(chanelName) {
+            db.collection("rooms").add({
+                name:chanelName
+            })
+        }
+    }
     return (
         <div className='sidebarOption' onClick={addChannelOption ? addChannel : selectChannel }>
             {Icon && <Icon className='sidebarOption_icon' />}
