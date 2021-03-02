@@ -17,7 +17,7 @@ function Header()  {
             </dev>
             <div className="header_search">
                 <SearchIcon/>
-                <input type="text" placeholder='Search Clever Programmer'/>
+                <input type="text" placeholder='Search'/>
             </div>
             <div className="header_right">
                 <HelpOutlineOutlinedIcon/>
