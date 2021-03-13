@@ -1,6 +1,8 @@
 import { Avatar } from '@material-ui/core'
-import { VerifiedUser } from '@material-ui/icons'
+import { ChatBubbleOutline, PublishOutlined, RepeatOutlined, VerifiedUser } from '@material-ui/icons'
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import React from 'react'
+import './Post.css'
 
 function Post() {
     return (
@@ -13,7 +15,7 @@ function Post() {
                     <div className="post_headerText">
                         <h3>
                             Sithija Shehara <span>
-                                <VerifiedUser className='post_badge'/>
+                                <VerifiedUser className='post_badge'/> @nsithijashehara
                             </span>
                         </h3>
                     </div>
@@ -22,6 +24,12 @@ function Post() {
                     </div>
                 </div>
                 <img src="https://hiring.monster.com/employer-resources/empres-resources/uploads/sites/2/2019/02/0b9a484e73ce137bf015e0dde595f466-700x525.jpg" alt=''/>
+                <div className="post_footer">
+                    <ChatBubbleOutline fontSize='small'/>
+                    <RepeatOutlined fontSize='small'/>
+                    <FavoriteBorderIcon fontSize='small'/>
+                    <PublishOutlined fontSize='small'/>
+                </div>
             </div>
         </div>
     )
