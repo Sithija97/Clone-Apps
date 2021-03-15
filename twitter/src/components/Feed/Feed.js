@@ -14,7 +14,7 @@ function Feed() {
         <div className="feed">
             {/* Heder */}
             <div className="feed_header">
-                <h2>Home</h2>
+                <h2>Welcome Home</h2>
             </div>
             {/* Tweet box */}
             <TweetBox/>
