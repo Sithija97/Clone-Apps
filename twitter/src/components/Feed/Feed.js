@@ -21,7 +21,7 @@ function Feed() {
             {/* Tweets */}
             {posts.map(post =>(
                 <Post
-                key={post.text}
+                // key={post.text}
                 displayName={post.displayName}
                 username={post.username}
                 verified={post.verified}
