@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "target":"slack",
+    "target":"twitter",
     "public": "build",
     "ignore": [
       "firebase.json",

@@ -5,7 +5,7 @@
   "targets": {
     "clones-abb28": {
       "hosting": {
-        "slack": [
+        "twitter": [
           "clones-abb28"
         ]
       }
