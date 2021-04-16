@@ -17,6 +17,8 @@ function TweetBox() {
       avatar:'https://scontent.fcmb4-1.fna.fbcdn.net/v/t1.0-9/14479659_136128056846884_5880104691633357055_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=174925&_nc_ohc=cBBmqdyIRdQAX_7K6ky&_nc_oc=AQmOZ6jk5lVEbKe6zs0pKCj9LUpdg0wdRFThI-OSwqwRENlMgJwOnsS2vOnpWIDDGG0&_nc_ht=scontent.fcmb4-1.fna&oh=18f046def2d60a25bc768cbf8935d5e9&oe=60783299',
       image:tweetImage
     })
+    setTweetMessage('')
+    setTweetImage('')
   }
     return (
         <div className="tweetBox">
