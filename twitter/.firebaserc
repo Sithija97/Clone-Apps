@@ -1,14 +1,5 @@
 {
   "projects": {
-    "default": "clones-abb28"
-  },
-  "targets": {
-    "clones-abb28": {
-      "hosting": {
-        "twitter": [
-          "clones-abb28"
-        ]
-      }
-    }
+    "default": "twitter-5eaed"
   }
 }
