@@ -12,7 +12,7 @@ function Sidebar() {
     return (
         <div className="sidebar">
             <SidebarRow
-                src=''
+                src='https://scontent.fcmb4-1.fna.fbcdn.net/v/t1.6435-9/120949464_2667999066834394_4728770985596586303_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=5gZPr8AaxaEAX_oNDMY&_nc_ht=scontent.fcmb4-1.fna&oh=7fb5cc81b4dd6c4045232780d79e8f65&oe=60A91DF2'
                 title='sithija'
             />
             <SidebarRow
