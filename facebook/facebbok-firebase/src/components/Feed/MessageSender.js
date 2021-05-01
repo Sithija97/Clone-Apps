@@ -6,18 +6,26 @@ import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 
 function MessageSender() {
-
+  const [input, setInput] = useState('')
+  const [imageUrl, setImageUrl] = useState('')
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
   return (
     <div className="messageSender">
       <div className="messageSender__top">
-        <Avatar src=''/>
+        <Avatar src='' />
         <form>
           <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
             type="text"
             className="messageSender__input"
             placeholder={`What's on your mind, sithija?`}
           />
           <input
+            value={imageUrl}
+            onChange={(e) => setImageUrl(e.target.value)}
             type="text"
             placeholder="Image URL (Optional)"
           />
