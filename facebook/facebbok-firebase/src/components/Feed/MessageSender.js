@@ -4,17 +4,23 @@ import './MessageSender.css';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
+import { useStateValue } from '../../StateProvider';
 
 function MessageSender() {
   const [input, setInput] = useState('')
   const [imageUrl, setImageUrl] = useState('')
+  const [{ user }, dispatch] = useStateValue();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    // db
+    setInput('')
+    setImageUrl('')
   }
   return (
     <div className="messageSender">
       <div className="messageSender__top">
-        <Avatar src='' />
+        <Avatar src={user.photoURL} />
         <form>
           <input
             value={input}
@@ -29,7 +35,7 @@ function MessageSender() {
             type="text"
             placeholder="Image URL (Optional)"
           />
-          <button type="submit">
+          <button type="submit" onClick={handleSubmit}>
             Hidden Button
           </button>
         </form>
