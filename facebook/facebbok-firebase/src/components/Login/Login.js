@@ -15,6 +15,7 @@ function Login() {
                 user: result.user,
             });
             console.log(result)
+            console.log(result.user.photoURL)
         }).catch((err) => { alert(err.message) })
     }
     return (

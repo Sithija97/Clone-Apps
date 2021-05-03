@@ -14,14 +14,14 @@ function Post({ profilePic, image, username, timestamp, message }) {
                 <Avatar src={profilePic} className="post__avatar" />
                 <div className="post__topInfo">
                     <h3>{username}</h3>
-                    <p>timestamp</p>
+                    <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
                 </div>
             </div>
             <div className="post__bottom">
-                <p>Hello world</p>
+                <p>{message}</p>
             </div>
             <div className="post__image">
-                <img src='https://imgs.mongabay.com/wp-content/uploads/sites/20/2019/02/15071712/Elephant-herd-Sri-Lanka2-768x512.jpg' alt="" />
+                <img src={image} alt="" />
             </div>
 
             <div className="post__options">

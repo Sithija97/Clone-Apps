@@ -6,7 +6,7 @@ const firebaseConfig = {
   projectId: "facebook-9626b",
   storageBucket: "facebook-9626b.appspot.com",
   messagingSenderId: "978587175102",
-  appId: "1:978587175102:web:5828861ce821c80893f6ef"
+  appId: "1:978587175102:web:2a287f503716e06b93f6ef"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig)
